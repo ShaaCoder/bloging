@@ -1,0 +1,47 @@
+{% extends "base.html" %}
+{% block 'content' %}
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="haed">Add User</div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-3"></div>
+        <div class="col-md-6">
+            <form action="" method="Post">
+                {% csrf_token %}
+                {{message}}
+                <div class="mb-3">
+                    <label for="formGroupExampleInput" class="form-label">Full Name</label>
+                    <input type="text" name="title" class="form-control" id="formGroupExampleInput">
+                  </div>
+                  <div class="mb-3">
+                    <label for="formGroupExampleInput2" class="form-label">Email Id</label>
+                    <input type="text" name="slug" class="form-control" id="formGroupExampleInput2" >
+                </div>
+                <div class="mb-3">
+                    <label for="formGroupExampleInput" class="form-label">author</label>
+                    <input type="text" name="author" class="form-control" id="formGroupExampleInput">
+                  </div>
+                  <div class="mb-3">
+                    <label for="formGroupExampleInput2" class="form-label">Password</label>
+                    <input type="text" name="content" class="form-control" id="formGroupExampleInput2" >
+                </div>
+                {% comment %} <div class="mb-3">
+                    <select name="status" class="form-select" aria-label="Default select example">
+                        <option selected>Open this select menu</option>
+                        <option  >Draft</option>
+                        <option  >Publish</option>
+                    </select>
+                </div> {% endcomment %}
+                
+
+                <div class="mb-3">
+                   <input type="submit" value="Add User" class="btn btn-success">
+                </div>
+            </form>
+        </div>
+        <div class="col-md-3"></div>
+    </div>
+{% endblock 'content' %}
